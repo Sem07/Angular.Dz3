@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "dz3"
+    }
+  },
+  "defaultProject": "dz3",
+  "cli": {
+    "analytics": false
+  }
 }
