@@ -10,8 +10,8 @@ import { AllPostsComponent } from './entity/post/components/all-posts/all-posts.
 import { PostComponent } from './entity/post/components/post/post.component';
 import { ComentComponent } from './entity/coments/components/coment/coment.component';
 import { AllComentsComponent } from './entity/coments/components/all-coments/all-coments.component';
-import { UserPostComponent } from './entity/user/components/user-post/user-post.component';
 import { PostComentsComponent } from './entity/post/components/post-coments/post-coments.component';
+import { UserPostComponent } from './entity/user/components/user-post/user-post.component';
 
 
 
