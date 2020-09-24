@@ -13,8 +13,14 @@ export class UserPostComponent {
 
   id: number
   constructor(private activatedRouter: ActivatedRoute, private postService: PostService, private router: Router) {
-    this.activatedRouter.params.subscribe(value => {this.id = value.id;
-    console.log(this.router.getCurrentNavigation().extras.state)})
+    this.activatedRouter.params.subscribe(value => {
+      // this.id = value.id;
+      const user = this.router.getCurrentNavigation().extras.state;
+      if (user ) {
+        this.id =  user.user_id;
+      }
+      this.ngOnInit();
+    });
    }
 
   ngOnInit(): void {

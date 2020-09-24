@@ -1,5 +1,6 @@
-import { Post } from './../../../../models/Post';
-import { Component, Input, OnInit } from '@angular/core';
+import {Post} from './../../../../models/Post';
+import {Component, Input, OnInit} from '@angular/core';
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-post',
@@ -7,11 +8,20 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./post.component.css']
 })
 export class PostComponent {
- @Input()
-post: Post
-  constructor() { }
-  
-  ngOnInit(): void {
+  @Input()
+  post: Post;
+
+  constructor(private  router: Router, private  activatedRoute: ActivatedRoute) {
+
+  }
+
+
+  postGetComment(id: number): void {
+    this.router.navigate(['comments', id],
+      {
+        relativeTo: this.activatedRoute,
+        state: {postId: id}
+      });
   }
 
 }
