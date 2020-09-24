@@ -1,7 +1,8 @@
 <div >
     {{post.userId}}.{{post.id}}
     {{post.title}}
-    <button [routerLink]="['comments', post.id]"> Comments</button>
+    <button (click)="postGetComment(post.id)"> Comments</button>
     <hr>
-  
+
   </div>
+
